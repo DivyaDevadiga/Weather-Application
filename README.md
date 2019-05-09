@@ -1,4 +1,22 @@
-# Weatherapp
+
+
+Weather-Application
+Weather Application Using Angular
+
+Its basically a web application to get the weather report of any location.
+
+I have used OpenWeatherMap API to retrive the weather information of any city.
+
+Features:
+>>  Fetches the weather report using City Name and/or Country Code.
+>>  Displays Weather Animated CSS Cards for the searched city.
+>>  Displays Images corresponding to the weather for the searched city.
+
+Link:
+>> OpenWeatherMap :https://openweathermap.org/api
+
+
+Weatherapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.5.
 
