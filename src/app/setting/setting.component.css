@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200');
+.container{
+  height:430px;
+ 
+}
+
+*{
+  font:bolder;
+  color:white;
+
+}
+.form-group{
+  padding-left: 320px;
+}
+.form-control{
+  width:500px;
+  color:black;
+}
+.btn{
+  margin-left: 480px;
+
+  padding-left: 50px;
+  padding-right: 50px;
+}

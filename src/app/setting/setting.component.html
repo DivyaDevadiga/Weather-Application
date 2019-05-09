@@ -1,0 +1,16 @@
+<div class="container">
+
+  <h1 class="text-center primary"> Enter City and code </h1>
+  <form >
+    <div class="form-group">
+      <label > City</label>
+      <input type="text"  class="form-control"  placeholder="Enter the City here...." name="city" [(ngModel)]="city"   >
+
+      <label > Code</label>
+      <input type="text"  class="form-control" placeholder="Enter the code here..." name="code" [(ngModel)]="code"   >
+    </div>
+
+    <button class="btn btn-success" (click)="saveForm()">SEARCH</button>
+  </form>
+
+</div>

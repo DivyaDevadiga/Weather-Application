@@ -1,0 +1,144 @@
+<div class="card1">
+	<div class="container">
+  <div class="info">	
+      <h1 style="text-align: left; text-shadow: 2px 2px rgb(22, 175, 30);"><strong>{{weather.city.name}}</strong></h1>
+			<!--<h3><strong>Temp in Celcius:</strong> {{(weather.list[0].main.temp)-273.15}}</h3>-->
+			<h3 class="topright"><strong>{{weather.list[0].main.temp}} K</strong></h3>
+
+			<h3 style="font-size: medium;"> <strong>Weather description:</strong> {{weather.list[0].weather[0].description}}</h3>
+			<br/>
+			<br/>
+			<br/>
+      <h4 style="font-size: medium;"><strong>TempMin : </strong>{{weather.list[0].main.temp_min}}</h4>
+			<h4 style="font-size: medium;"><strong>TempMax : </strong>{{weather.list[0].main.temp_max}}  </h4>
+			<br/>
+      <h4 style="font-size: medium;"><strong>Pressure : </strong>{{weather.list[0].main.pressure}}</h4>
+      <h4 style="font-size: medium;"><strong>Wind : </strong>{{weather.list[0].wind.speed}}</h4>
+			<h4 style="font-size: medium;"> <strong>Humidity : </strong>{{weather.list[0].main.humidity}}</h4>
+      
+      <!--<h3> <strong>The weather main:</strong> {{weather.list[0].weather[0].main}}</h3> -->
+			<div [ngSwitch]="weather.list[0].weather[0].main">
+					<div *ngSwitchCase="'Clear'">
+							<img src="src\images\clear.jpg" style="width:480px;height:110px;float: right; margin: 0px 20px 15px 15px;"/>
+					</div>
+					<div *ngSwitchCase="'Clouds'">
+							<img src="src\images\cloudy.jpg" style="width:480px;height:110px;float: right; margin: 0px 20px 15px 15px;"/>
+					</div>
+					<div *ngSwitchCase="'Rain'">
+							<img src="src\images\rain.gif" style="width:480px;height:110px;float: right; margin: 0px 20px 15px 15px;"/>
+					</div>
+					<div *ngSwitchCase="'Snow'">
+							<img src="src\images\snow.gif" style="width:480px;height:110px;float: right; margin: 0px 20px 15px 15px;"/>
+					</div>
+			</div>
+		
+	</div> 
+	</div>
+</div>	
+
+
+		<div [ngSwitch]="weather.list[0].weather[0].main">
+			
+				<div *ngSwitchCase="'Clear'">
+					
+						<!-- HOT-->
+						<div class="hot">
+								<span class="sun" ></span>
+								<br/>
+								<span>
+								<p style="margin-left:40px; ">   {{weather.city.name}} </p>
+								<p style="margin-left:85px; font-size: medium;"> {{weather.city.country}} </p>
+								<p style="margin-left:40px;"> {{weather.list[0].main.temp}} K</p>
+								
+								
+								</span>
+								<span class="sunx"></span>
+						</div>
+				</div>
+
+				<div *ngSwitchCase="'Clouds'"> 
+					<!-- CLOUDY -->
+						<div class="cloudy">
+								<span class="cloudx"></span>
+								<br/>
+								<span>
+								<p style="margin-left:40px; ">   {{weather.city.name}} </p>
+								<p style="margin-left:85px; font-size: medium;"> {{weather.city.country}} </p>
+								<p style="margin-left:40px;"> {{weather.list[0].main.temp}} K</p>
+								</span>
+								<span class="cloudxx"></span>
+						</div>
+				</div>
+
+				<div *ngSwitchCase="'Rain'">
+						<!--STROMY -->
+						<div class="breezy">
+								<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>	
+								</ul>
+								<span class="cloudrr"></span>
+								<span class="cloudr"></span>
+								<br/>
+								<span>
+								<p style="margin-left:40px; ">   {{weather.city.name}} </p>
+								<p style="margin-left:85px; font-size: medium;"> {{weather.city.country}} </p>
+								<p style="margin-left:40px;"> {{weather.list[0].main.temp}} K</p>
+								</span>
+						</div>
+					</div>
+
+				<div *ngSwitchCase="'Snow'">
+					<!-- snowy / breezy / chilly -->
+						<div class="stormy">
+								<ul>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								</ul>
+								<br/>
+								<span>
+								<p style="margin-left:40px; ">   {{weather.city.name}} </p>
+								<p style="margin-left:85px; font-size: medium;"> {{weather.city.country}} </p>
+								
+								<p style="margin-left:40px;"> {{weather.list[0].main.temp}} K</p>
+								</span>
+								<span class="snowe"></span>
+								<span class="snowex"></span>
+								<span class="stick"></span>
+								<span class="stick2"></span>
+						</div>
+						
+				</div>
+
+				<div *ngSwitchCase="'night'">
+						<div class="night">
+								<span class="moon"></span>
+								<span class="spot1"></span>
+								<span class="spot2"></span>
+								<ul>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>	
+									</ul>
+									<br/>
+									<span>
+									<p style="margin-left:40px; ">   {{weather.city.name}} </p>
+									<p style="margin-left:85px; font-size: medium;"> {{weather.city.country}} </p>
+									
+									<p style="margin-left:40px;"> {{weather.list[0].main.temp}} K</p>
+									</span>
+							</div>
+				</div>		
+		</div>
+
